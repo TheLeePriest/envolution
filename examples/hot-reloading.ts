@@ -26,14 +26,14 @@ const env = createEnvironmentConfig(AppSchema, {
 });
 
 console.log("🚀 Application started with hot-reloading enabled");
-console.log(`📊 Current configuration:`);
+console.log("📊 Current configuration:");
 console.log(`   Port: ${env.get("PORT")}`);
 console.log(`   Debug Mode: ${env.get("DEBUG_MODE")}`);
 console.log(`   Database URL: ${env.get("DATABASE_URL")}`);
 
 // Listen for configuration changes
 env.on("configChanged", (change) => {
-	console.log(`🔄 Configuration changed:`);
+	console.log("🔄 Configuration changed:");
 	console.log(`   Variable: ${change.variable}`);
 	console.log(`   Type: ${change.type}`);
 	console.log(`   Old Value: ${change.oldValue}`);

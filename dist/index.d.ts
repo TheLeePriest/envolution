@@ -27,6 +27,6 @@ export type {
 	CustomEnvironment,
 	EnvironmentValidationError,
 } from "./types";
-import { EnvironmentConfig } from "./EnvironmentConfig";
+import type { EnvironmentConfig } from "./EnvironmentConfig";
 export declare const env: EnvironmentConfig<Record<string, unknown>>;
 //# sourceMappingURL=index.d.ts.map

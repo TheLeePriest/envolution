@@ -1,4 +1,4 @@
-import { z } from "zod";
+import type { z } from "zod";
 export declare const SecurityEnvironmentSchema: z.ZodObject<
 	{
 		JWT_SECRET: z.ZodOptional<z.ZodString>;

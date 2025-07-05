@@ -1,5 +1,5 @@
 import type { z } from "zod";
-import { EnvironmentConfig } from "../EnvironmentConfig";
+import type { EnvironmentConfig } from "../EnvironmentConfig";
 export declare function createCustomSchema<T extends z.ZodRawShape>(
 	schema: z.ZodObject<T>,
 ): z.ZodObject<T>;

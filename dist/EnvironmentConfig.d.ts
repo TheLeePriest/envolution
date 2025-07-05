@@ -1,4 +1,4 @@
-import { z } from "zod";
+import type { z } from "zod";
 import { EventEmitter } from "node:events";
 export interface EnvironmentConfigOptions {
 	envFiles?: string[];

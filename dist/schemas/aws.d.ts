@@ -1,4 +1,4 @@
-import { z } from "zod";
+import type { z } from "zod";
 export declare const AWSEnvironmentSchema: z.ZodObject<
 	{
 		AWS_REGION: z.ZodOptional<z.ZodString>;

@@ -1,4 +1,4 @@
-import { z } from "zod";
+import type { z } from "zod";
 export declare const BaseEnvironmentSchema: z.ZodObject<
 	{
 		STAGE: z.ZodDefault<z.ZodEnum<["dev", "prod", "test"]>>;
