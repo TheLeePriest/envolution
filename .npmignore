@@ -1,0 +1,15 @@
+# Ignore development and build files
+node_modules/
+dist/tests/
+tests/
+examples/
+.env*
+*.log
+*.ts
+*.test.ts
+.biome*
+.vitest*
+.git/
+.gitignore
+biome.json
+vitest.config.* 

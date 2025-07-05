@@ -1,0 +1,87 @@
+import { z } from "zod";
+export declare const AWSEnvironmentSchema: z.ZodObject<
+	{
+		AWS_REGION: z.ZodOptional<z.ZodString>;
+		AWS_ACCOUNT_ID: z.ZodOptional<z.ZodString>;
+		STATE_MACHINE_ARN: z.ZodOptional<z.ZodString>;
+		QUOTA_TABLE: z.ZodOptional<z.ZodString>;
+		MODEL_KEY: z.ZodOptional<z.ZodString>;
+		MAX_TOKENS: z.ZodOptional<
+			z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>
+		>;
+		REFILL_RATE_PER_MS: z.ZodOptional<
+			z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>
+		>;
+		ANALYSIS_CACHE_TABLE_NAME: z.ZodOptional<z.ZodString>;
+		JOB_TABLE_NAME: z.ZodOptional<z.ZodString>;
+		LICENSE_TABLE_NAME: z.ZodOptional<z.ZodString>;
+		CACHE_TABLE_NAME: z.ZodOptional<z.ZodString>;
+		TABLE_INDEX: z.ZodOptional<z.ZodString>;
+		QUEUE_URL: z.ZodOptional<z.ZodString>;
+		MODEL_ID: z.ZodOptional<z.ZodString>;
+		EVENT_BUS_NAME: z.ZodOptional<z.ZodString>;
+		S3_BUCKET: z.ZodOptional<z.ZodString>;
+		DYNAMODB_TABLE: z.ZodOptional<z.ZodString>;
+		SQS_QUEUE_URL: z.ZodOptional<z.ZodString>;
+		SNS_TOPIC_ARN: z.ZodOptional<z.ZodString>;
+		LAMBDA_FUNCTION_NAME: z.ZodOptional<z.ZodString>;
+		LAMBDA_TIMEOUT: z.ZodDefault<
+			z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>
+		>;
+		LAMBDA_MEMORY_SIZE: z.ZodDefault<
+			z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>
+		>;
+	},
+	"strip",
+	z.ZodTypeAny,
+	{
+		LAMBDA_TIMEOUT: number;
+		LAMBDA_MEMORY_SIZE: number;
+		AWS_REGION?: string | undefined;
+		AWS_ACCOUNT_ID?: string | undefined;
+		STATE_MACHINE_ARN?: string | undefined;
+		QUOTA_TABLE?: string | undefined;
+		MODEL_KEY?: string | undefined;
+		MAX_TOKENS?: number | undefined;
+		REFILL_RATE_PER_MS?: number | undefined;
+		ANALYSIS_CACHE_TABLE_NAME?: string | undefined;
+		JOB_TABLE_NAME?: string | undefined;
+		LICENSE_TABLE_NAME?: string | undefined;
+		CACHE_TABLE_NAME?: string | undefined;
+		TABLE_INDEX?: string | undefined;
+		QUEUE_URL?: string | undefined;
+		MODEL_ID?: string | undefined;
+		EVENT_BUS_NAME?: string | undefined;
+		S3_BUCKET?: string | undefined;
+		DYNAMODB_TABLE?: string | undefined;
+		SQS_QUEUE_URL?: string | undefined;
+		SNS_TOPIC_ARN?: string | undefined;
+		LAMBDA_FUNCTION_NAME?: string | undefined;
+	},
+	{
+		AWS_REGION?: string | undefined;
+		AWS_ACCOUNT_ID?: string | undefined;
+		STATE_MACHINE_ARN?: string | undefined;
+		QUOTA_TABLE?: string | undefined;
+		MODEL_KEY?: string | undefined;
+		MAX_TOKENS?: string | undefined;
+		REFILL_RATE_PER_MS?: string | undefined;
+		ANALYSIS_CACHE_TABLE_NAME?: string | undefined;
+		JOB_TABLE_NAME?: string | undefined;
+		LICENSE_TABLE_NAME?: string | undefined;
+		CACHE_TABLE_NAME?: string | undefined;
+		TABLE_INDEX?: string | undefined;
+		QUEUE_URL?: string | undefined;
+		MODEL_ID?: string | undefined;
+		EVENT_BUS_NAME?: string | undefined;
+		S3_BUCKET?: string | undefined;
+		DYNAMODB_TABLE?: string | undefined;
+		SQS_QUEUE_URL?: string | undefined;
+		SNS_TOPIC_ARN?: string | undefined;
+		LAMBDA_FUNCTION_NAME?: string | undefined;
+		LAMBDA_TIMEOUT?: string | undefined;
+		LAMBDA_MEMORY_SIZE?: string | undefined;
+	}
+>;
+export type AWSEnvironment = z.infer<typeof AWSEnvironmentSchema>;
+//# sourceMappingURL=aws.d.ts.map
