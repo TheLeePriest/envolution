@@ -1,17 +1,12 @@
-import type { z } from 'zod';
-export declare const AWSEnvironmentSchema: z.ZodObject<
-  {
+import { z } from 'zod';
+export declare const AWSEnvironmentSchema: z.ZodObject<{
     AWS_REGION: z.ZodOptional<z.ZodString>;
     AWS_ACCOUNT_ID: z.ZodOptional<z.ZodString>;
     STATE_MACHINE_ARN: z.ZodOptional<z.ZodString>;
     QUOTA_TABLE: z.ZodOptional<z.ZodString>;
     MODEL_KEY: z.ZodOptional<z.ZodString>;
-    MAX_TOKENS: z.ZodOptional<
-      z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>
-    >;
-    REFILL_RATE_PER_MS: z.ZodOptional<
-      z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>
-    >;
+    MAX_TOKENS: z.ZodOptional<z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>>;
+    REFILL_RATE_PER_MS: z.ZodOptional<z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>>;
     ANALYSIS_CACHE_TABLE_NAME: z.ZodOptional<z.ZodString>;
     JOB_TABLE_NAME: z.ZodOptional<z.ZodString>;
     LICENSE_TABLE_NAME: z.ZodOptional<z.ZodString>;
@@ -25,16 +20,9 @@ export declare const AWSEnvironmentSchema: z.ZodObject<
     SQS_QUEUE_URL: z.ZodOptional<z.ZodString>;
     SNS_TOPIC_ARN: z.ZodOptional<z.ZodString>;
     LAMBDA_FUNCTION_NAME: z.ZodOptional<z.ZodString>;
-    LAMBDA_TIMEOUT: z.ZodDefault<
-      z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>
-    >;
-    LAMBDA_MEMORY_SIZE: z.ZodDefault<
-      z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>
-    >;
-  },
-  'strip',
-  z.ZodTypeAny,
-  {
+    LAMBDA_TIMEOUT: z.ZodDefault<z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>>;
+    LAMBDA_MEMORY_SIZE: z.ZodDefault<z.ZodPipeline<z.ZodEffects<z.ZodString, number, string>, z.ZodNumber>>;
+}, "strip", z.ZodTypeAny, {
     LAMBDA_TIMEOUT: number;
     LAMBDA_MEMORY_SIZE: number;
     AWS_REGION?: string | undefined;
@@ -57,8 +45,7 @@ export declare const AWSEnvironmentSchema: z.ZodObject<
     SQS_QUEUE_URL?: string | undefined;
     SNS_TOPIC_ARN?: string | undefined;
     LAMBDA_FUNCTION_NAME?: string | undefined;
-  },
-  {
+}, {
     AWS_REGION?: string | undefined;
     AWS_ACCOUNT_ID?: string | undefined;
     STATE_MACHINE_ARN?: string | undefined;
@@ -81,7 +68,6 @@ export declare const AWSEnvironmentSchema: z.ZodObject<
     LAMBDA_FUNCTION_NAME?: string | undefined;
     LAMBDA_TIMEOUT?: string | undefined;
     LAMBDA_MEMORY_SIZE?: string | undefined;
-  }
->;
+}>;
 export type AWSEnvironment = z.infer<typeof AWSEnvironmentSchema>;
 //# sourceMappingURL=aws.d.ts.map

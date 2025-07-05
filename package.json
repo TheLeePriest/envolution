@@ -1,7 +1,7 @@
 {
   "name": "envolution",
   "version": "1.2.0",
-  "description": "TypeScript-first environment configuration with Zod validation, .env support, hot reloading, and startup validation. Perfect for Node.js, AWS Lambda, and modern TypeScript applications.",
+  "description": "TypeScript-first environment configuration with Zod validation, .env support, hot reloading, and startup validation. Zero-config setup - just install and use! Perfect for Node.js, AWS Lambda, and modern TypeScript applications.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -11,10 +11,7 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": [
-    "dist",
-    "README.md"
-  ],
+  "files": ["dist", "README.md"],
   "scripts": {
     "build": "tsc",
     "test": "vitest",
@@ -42,10 +39,7 @@
     "typescript": "^5.8.3",
     "vitest": "^3.1.4"
   },
-  "peerDependencies": {
-    "dotenv": ">=16.0.0",
-    "zod": ">=3.0.0"
-  },
+
   "keywords": [
     "environment",
     "configuration",
@@ -90,13 +84,6 @@
   },
   "sideEffects": false,
   "type": "module",
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ],
-  "cpu": [
-    "x64",
-    "arm64"
-  ]
+  "os": ["darwin", "linux", "win32"],
+  "cpu": ["x64", "arm64"]
 }

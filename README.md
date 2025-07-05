@@ -45,8 +45,10 @@ A TypeScript-first environment configuration package with Zod validation, type s
 ## Installation
 
 ```bash
-npm install envolution zod dotenv
+npm install envolution
 ```
+
+**✨ Zero-config setup!** `envolution` includes all its dependencies (`zod` and `dotenv`) - no need to install anything else.
 
 ## Why envolution?
 
@@ -59,7 +61,7 @@ npm install envolution zod dotenv
 | AWS Optimized | ✅ Built-in schemas | ❌ No | ❌ No | ❌ No |
 | Startup Validation | ✅ Built-in | ❌ No | ❌ No | ❌ No |
 | Bundle Size | ✅ Tree-shakeable | ✅ Small | ❌ Large | ❌ Large |
-| Zero Dependencies | ✅ Only Zod (peer) | ✅ Yes | ❌ Many deps | ❌ Many deps |
+| Zero Dependencies | ✅ Standalone package | ✅ Yes | ❌ Many deps | ❌ Many deps |
 
 ## Quick Start
 
