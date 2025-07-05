@@ -11,10 +11,7 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": [
-    "dist",
-    "README.md"
-  ],
+  "files": ["dist", "README.md"],
   "scripts": {
     "build": "tsc",
     "test": "vitest",
@@ -68,31 +65,20 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cdk-insights/envolution.git"
+    "url": "https://github.com/TheLeePriest/envolution.git"
   },
   "bugs": {
-    "url": "https://github.com/cdk-insights/envolution/issues"
+    "url": "https://github.com/TheLeePriest/envolution/issues"
   },
-  "homepage": "https://github.com/cdk-insights/envolution#readme",
+  "homepage": "https://github.com/TheLeePriest/envolution#readme",
   "engines": {
     "node": ">=18.0.0"
   },
   "publishConfig": {
     "access": "public"
   },
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/cdk-insights"
-  },
   "sideEffects": false,
   "type": "module",
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ],
-  "cpu": [
-    "x64",
-    "arm64"
-  ]
+  "os": ["darwin", "linux", "win32"],
+  "cpu": ["x64", "arm64"]
 }
