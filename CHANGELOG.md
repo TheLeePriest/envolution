@@ -90,3 +90,13 @@ Thanks to Lee Priest for contributing to this release!
 
 Thanks to Lee Priest for contributing to this release!
 
+## [1.3.0] - 2025-07-05 (MINOR RELEASE)
+
+### ✨ Features
+
+- Add support for commonjs as well as es modules (3af4ce9a)
+
+### 👥 Contributors
+
+Thanks to Lee Priest for contributing to this release!
+
