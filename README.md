@@ -38,8 +38,9 @@ A TypeScript-first environment configuration package with Zod validation, type s
 - 📋 **Template Generation**: Generate .env templates and TypeScript types from schemas
 - 🚀 **Singleton Pattern**: Thread-safe singleton instance
 - ☁️ **AWS Optimized**: Built-in AWS-specific schemas
-- 📦 **Zero Dependencies**: Only depends on Zod (peer dependency)
+- 📦 **Zero Dependencies**: Includes all dependencies - no setup required
 - 🌳 **Tree Shakeable**: Modular exports for optimal bundle size
+- 🔄 **Dual Module Support**: Works with both CommonJS and ES Modules
 - 🧪 **Well Tested**: Comprehensive test coverage
 
 ## Installation
@@ -49,6 +50,22 @@ npm install envolution
 ```
 
 **✨ Zero-config setup!** `envolution` includes all its dependencies (`zod` and `dotenv`) - no need to install anything else.
+
+## Module Compatibility
+
+`envolution` supports both CommonJS and ES Modules:
+
+### CommonJS
+```javascript
+const { EnvironmentConfig, BaseEnvironmentSchema } = require('envolution');
+```
+
+### ES Modules
+```javascript
+import { EnvironmentConfig, BaseEnvironmentSchema } from 'envolution';
+```
+
+The package automatically detects your project's module system and provides the appropriate format.
 
 ## Why envolution?
 

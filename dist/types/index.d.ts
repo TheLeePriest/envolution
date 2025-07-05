@@ -1,44 +1,11 @@
-export type BaseEnvironment = {
-    STAGE: 'dev' | 'prod' | 'test';
-    NODE_ENV?: 'development' | 'production' | 'test';
-    LOG_LEVEL: 'debug' | 'info' | 'warn' | 'error';
-};
-export type AWSEnvironment = {
-    AWS_REGION?: string;
-    AWS_ACCOUNT_ID?: string;
-    STATE_MACHINE_ARN?: string;
-    QUOTA_TABLE?: string;
-    MODEL_KEY?: string;
-    MAX_TOKENS?: number;
-    REFILL_RATE_PER_MS?: number;
-    ANALYSIS_CACHE_TABLE_NAME?: string;
-    JOB_TABLE_NAME?: string;
-    LICENSE_TABLE_NAME?: string;
-    CACHE_TABLE_NAME?: string;
-    TABLE_INDEX?: string;
-    QUEUE_URL?: string;
-    MODEL_ID?: string;
-    EVENT_BUS_NAME?: string;
-};
-export type SecurityEnvironment = {
-    JWT_SECRET?: string;
-    API_KEY?: string;
-    ENCRYPTION_KEY?: string;
-};
-export type FullEnvironment = BaseEnvironment & AWSEnvironment & SecurityEnvironment;
-export type CustomEnvironment<T = Record<string, unknown>> = BaseEnvironment & T;
-export interface EnvironmentConfigOptions {
-    strict?: boolean;
-    allowUnknown?: boolean;
-    context?: string;
-}
-export interface EnvironmentValidationError {
-    message: string;
-    errors: Array<{
-        path: string[];
-        message: string;
-        code: string;
-    }>;
-    context?: string;
-}
+export type { ConfigChangeEvent, EnvironmentConfigOptions, } from './EnvironmentConfig';
+export { EnvironmentConfig } from './EnvironmentConfig';
+export { type AWSEnvironment, AWSEnvironmentSchema } from './schemas/aws';
+export { type BaseEnvironment, BaseEnvironmentSchema } from './schemas/base';
+export { createCustomSchema, createEnvironmentConfig, mergeSchemas, } from './schemas/custom';
+export { type SecurityEnvironment, SecurityEnvironmentSchema, } from './schemas/security';
+export { generateAllTemplates, generateEnvTemplate, generateJsonSchema, generateTypes, type TemplateOptions, type TemplateResult, } from './templates';
+export type { CustomEnvironment, EnvironmentValidationError, FullEnvironment, } from './types';
+import { EnvironmentConfig } from './EnvironmentConfig';
+export declare const env: EnvironmentConfig<Record<string, unknown>>;
 //# sourceMappingURL=index.d.ts.map
