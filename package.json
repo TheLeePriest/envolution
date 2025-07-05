@@ -11,10 +11,7 @@
       "types": "./dist/index.d.ts"
     }
   },
-  "files": [
-    "dist",
-    "README.md"
-  ],
+  "files": ["dist", "README.md"],
   "scripts": {
     "build": "tsc",
     "test": "vitest",
@@ -90,13 +87,6 @@
   },
   "sideEffects": false,
   "type": "module",
-  "os": [
-    "darwin",
-    "linux",
-    "win32"
-  ],
-  "cpu": [
-    "x64",
-    "arm64"
-  ]
+  "os": ["darwin", "linux", "win32"],
+  "cpu": ["x64", "arm64"]
 }
