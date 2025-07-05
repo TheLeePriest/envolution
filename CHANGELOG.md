@@ -56,3 +56,13 @@ Thanks to Lee Priest for contributing to this release!
 
 Thanks to Lee Priest for contributing to this release!
 
+## [1.2.1] - 2025-07-05 (PATCH RELEASE)
+
+### 🔨 Chores
+
+- Bundle required dependencies with envolution (ed0ce476)
+
+### 👥 Contributors
+
+Thanks to Lee Priest for contributing to this release!
+
