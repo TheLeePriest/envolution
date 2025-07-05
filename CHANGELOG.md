@@ -76,3 +76,17 @@ Thanks to Lee Priest for contributing to this release!
 
 Thanks to Lee Priest for contributing to this release!
 
+## [1.2.2] - 2025-07-05 (PATCH RELEASE)
+
+### 📚 Documentation
+
+- update changelog (0c8cc146)
+
+### 🐛 Bug Fixes
+
+- update repository url (657e8979)
+
+### 👥 Contributors
+
+Thanks to Lee Priest for contributing to this release!
+
