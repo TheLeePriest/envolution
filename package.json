@@ -1,7 +1,7 @@
 {
 	"name": "envolution",
 	"version": "1.1.0",
-	"description": "TypeScript-first environment configuration with Zod validation, .env support, and startup validation.",
+	"description": "TypeScript-first environment configuration with Zod validation, .env support, hot reloading, and startup validation. Perfect for Node.js, AWS Lambda, and modern TypeScript applications.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"exports": {
@@ -51,7 +51,19 @@
 		"validation",
 		"aws",
 		"lambda",
-		"dotenv"
+		"dotenv",
+		"env",
+		"config",
+		"environment-variables",
+		"type-safe",
+		"hot-reload",
+		"startup-validation",
+		"schema-validation",
+		"nodejs",
+		"serverless",
+		"template-generation",
+		"singleton",
+		"runtime-validation"
 	],
 	"author": "CDK Insights Team",
 	"license": "MIT",
@@ -65,5 +77,23 @@
 	"homepage": "https://github.com/cdk-insights/envolution#readme",
 	"engines": {
 		"node": ">=18.0.0"
-	}
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"funding": {
+		"type": "github",
+		"url": "https://github.com/sponsors/cdk-insights"
+	},
+	"sideEffects": false,
+	"type": "module",
+	"os": [
+		"darwin",
+		"linux",
+		"win32"
+	],
+	"cpu": [
+		"x64",
+		"arm64"
+	]
 }

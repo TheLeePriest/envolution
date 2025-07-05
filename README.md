@@ -1,6 +1,31 @@
 # envolution
 
-A TypeScript-first environment configuration package with Zod validation, type safety, extensible schemas, .env file support, and startup validation.
+[![npm version](https://badge.fury.io/js/envolution.svg)](https://badge.fury.io/js/envolution)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.8+-blue.svg)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
+
+A TypeScript-first environment configuration package with Zod validation, type safety, extensible schemas, .env file support, hot reloading, and startup validation. Perfect for Node.js, AWS Lambda, and modern TypeScript applications.
+
+## 📋 Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+  - [Basic Usage](#basic-usage)
+  - [.env File Support](#env-file-support)
+  - [Hot Reloading](#hot-reloading)
+  - [Template Generation](#template-generation)
+  - [Startup Validation](#startup-validation)
+  - [Custom Schema](#custom-schema)
+  - [AWS Lambda Usage](#aws-lambda-usage)
+- [Available Schemas](#available-schemas)
+- [API Reference](#api-reference)
+- [Environment Variables](#environment-variables)
+- [Error Handling](#error-handling)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Features
 
@@ -22,6 +47,19 @@ A TypeScript-first environment configuration package with Zod validation, type s
 ```bash
 npm install envolution zod dotenv
 ```
+
+## Why envolution?
+
+| Feature | envolution | dotenv | config | convict |
+|---------|------------|--------|--------|---------|
+| TypeScript Support | ✅ Full type safety | ❌ No types | ❌ Basic types | ❌ No types |
+| Runtime Validation | ✅ Zod schemas | ❌ No validation | ❌ No validation | ✅ Basic validation |
+| Hot Reloading | ✅ Built-in | ❌ No | ❌ No | ❌ No |
+| Template Generation | ✅ Auto-generate .env templates | ❌ Manual | ❌ Manual | ❌ Manual |
+| AWS Optimized | ✅ Built-in schemas | ❌ No | ❌ No | ❌ No |
+| Startup Validation | ✅ Built-in | ❌ No | ❌ No | ❌ No |
+| Bundle Size | ✅ Tree-shakeable | ✅ Small | ❌ Large | ❌ Large |
+| Zero Dependencies | ✅ Only Zod (peer) | ✅ Yes | ❌ Many deps | ❌ Many deps |
 
 ## Quick Start
 
