@@ -1,99 +1,102 @@
 {
-	"name": "envolution",
-	"version": "1.1.0",
-	"description": "TypeScript-first environment configuration with Zod validation, .env support, hot reloading, and startup validation. Perfect for Node.js, AWS Lambda, and modern TypeScript applications.",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
-	"exports": {
-		".": {
-			"import": "./dist/index.js",
-			"require": "./dist/index.js",
-			"types": "./dist/index.d.ts"
-		}
-	},
-	"files": ["dist", "README.md"],
-	"scripts": {
-		"build": "tsc",
-		"test": "vitest",
-		"lint": "biome check",
-		"format": "biome format --write",
-		"prepublishOnly": "npm run build",
-		"validate:commits": "./node_modules/.bin/bumper validate",
-		"changelog:preview": "./node_modules/.bin/bumper preview",
-		"changelog:generate": "./node_modules/.bin/bumper generate",
-		"release:patch": "./node_modules/.bin/bumper release patch",
-		"release:minor": "./node_modules/.bin/bumper release minor",
-		"release:major": "./node_modules/.bin/bumper release major",
-		"release:dry-run": "./node_modules/.bin/bumper release patch --dry-run"
-	},
-	"dependencies": {
-		"dotenv": ">=16.0.0",
-		"zod": ">=3.0.0"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
-		"@commitlint/cli": "^19.8.1",
-		"@types/node": "^22.15.21",
-		"bumper-cli": "^1.5.8",
-		"husky": "^9.1.7",
-		"typescript": "^5.8.3",
-		"vitest": "^3.1.4"
-	},
-	"peerDependencies": {
-		"dotenv": ">=16.0.0",
-		"zod": ">=3.0.0"
-	},
-	"keywords": [
-		"environment",
-		"configuration",
-		"typescript",
-		"zod",
-		"validation",
-		"aws",
-		"lambda",
-		"dotenv",
-		"env",
-		"config",
-		"environment-variables",
-		"type-safe",
-		"hot-reload",
-		"startup-validation",
-		"schema-validation",
-		"nodejs",
-		"serverless",
-		"template-generation",
-		"singleton",
-		"runtime-validation"
-	],
-	"author": "CDK Insights Team",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/cdk-insights/envolution.git"
-	},
-	"bugs": {
-		"url": "https://github.com/cdk-insights/envolution/issues"
-	},
-	"homepage": "https://github.com/cdk-insights/envolution#readme",
-	"engines": {
-		"node": ">=18.0.0"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"funding": {
-		"type": "github",
-		"url": "https://github.com/sponsors/cdk-insights"
-	},
-	"sideEffects": false,
-	"type": "module",
-	"os": [
-		"darwin",
-		"linux",
-		"win32"
-	],
-	"cpu": [
-		"x64",
-		"arm64"
-	]
+  "name": "envolution",
+  "version": "1.1.0",
+  "description": "TypeScript-first environment configuration with Zod validation, .env support, hot reloading, and startup validation. Perfect for Node.js, AWS Lambda, and modern TypeScript applications.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "lint": "biome check",
+    "format": "biome format --write",
+    "prepublishOnly": "npm run build",
+    "validate:commits": "./node_modules/.bin/bumper validate",
+    "changelog:preview": "./node_modules/.bin/bumper preview",
+    "changelog:generate": "./node_modules/.bin/bumper generate",
+    "release:patch": "./node_modules/.bin/bumper release patch",
+    "release:minor": "./node_modules/.bin/bumper release minor",
+    "release:major": "./node_modules/.bin/bumper release major",
+    "release:dry-run": "./node_modules/.bin/bumper release patch --dry-run"
+  },
+  "dependencies": {
+    "dotenv": ">=16.0.0",
+    "zod": ">=3.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@commitlint/cli": "^19.8.1",
+    "@types/node": "^22.15.21",
+    "bumper-cli": "^1.5.8",
+    "husky": "^9.1.7",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  },
+  "peerDependencies": {
+    "dotenv": ">=16.0.0",
+    "zod": ">=3.0.0"
+  },
+  "keywords": [
+    "environment",
+    "configuration",
+    "typescript",
+    "zod",
+    "validation",
+    "aws",
+    "lambda",
+    "dotenv",
+    "env",
+    "config",
+    "environment-variables",
+    "type-safe",
+    "hot-reload",
+    "startup-validation",
+    "schema-validation",
+    "nodejs",
+    "serverless",
+    "template-generation",
+    "singleton",
+    "runtime-validation"
+  ],
+  "author": "CDK Insights Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cdk-insights/envolution.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cdk-insights/envolution/issues"
+  },
+  "homepage": "https://github.com/cdk-insights/envolution#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/cdk-insights"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ]
 }

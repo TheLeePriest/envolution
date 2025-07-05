@@ -1,14 +1,14 @@
-import { BaseEnvironmentSchema, EnvironmentConfig } from "../src";
+import { EnvironmentConfig } from '../src';
 
 // Basic usage with default schema
 const env = EnvironmentConfig.getInstance();
 
 // Get values
-const stage = env.get("STAGE"); // 'dev' | 'prod' | 'test'
-const logLevel = env.get("LOG_LEVEL"); // 'debug' | 'info' | 'warn' | 'error'
+const _stage = env.get('STAGE'); // 'dev' | 'prod' | 'test'
+const _logLevel = env.get('LOG_LEVEL'); // 'debug' | 'info' | 'warn' | 'error'
 
 // Get required values (throws if missing)
-const serviceName = env.getRequired("SERVICE_NAME", "MyService");
+const _serviceName = env.getRequired('SERVICE_NAME', 'MyService');
 
 // Convenience getters
 console.log(`Running in ${env.stage} mode`);
@@ -17,4 +17,4 @@ console.log(`Is development: ${env.isDevelopment}`);
 
 // Get all config
 const allConfig = env.getAll();
-console.log("All environment variables:", allConfig);
+console.log('All environment variables:', allConfig);
