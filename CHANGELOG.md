@@ -31,3 +31,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Thanks to Lee Priest for contributing to this release!
 
+## [1.2.0] - 2025-07-05 (MINOR RELEASE)
+
+### 📚 Documentation
+
+- update changelog for release (940744c9)
+
+### 🔨 Chores
+
+- fix lint issues (0b6d54d2)
+- add sensible .gitignore for Node/TypeScript project (59e82d44)
+- **release:** initial release of envolution (7f22f114)
+
+### 🐛 Bug Fixes
+
+- Linting fixes and other minor fixes (d2bee643)
+
+### ✨ Features
+
+- optimize package for maximum npm discoverability (13b4ad9b)
+- update hot-reloading example and rebuild TypeScript declarations (275d98f6)
+
+### 👥 Contributors
+
+Thanks to Lee Priest for contributing to this release!
+
