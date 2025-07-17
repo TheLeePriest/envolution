@@ -285,7 +285,9 @@ Includes security-related variables:
 
 #### `getInstance<T>(schema?, options?)`
 
-Get singleton instance of EnvironmentConfig. Options:
+Get singleton instance of EnvironmentConfig. **Note**: You must call this method explicitly to configure options like `suppressWarnings`. There is no automatic `env` export to prevent unwanted initialization.
+
+Options:
 
 - `envFiles`: string[] — Which .env files to load (default: ['.env', '.env.local'])
 - `loadEnvFiles`: boolean — Whether to load .env files (default: true)

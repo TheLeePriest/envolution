@@ -37,5 +37,5 @@ export type {
 } from './types';
 
 // Convenience exports
-import { EnvironmentConfig } from './EnvironmentConfig';
-export const env = EnvironmentConfig.getInstance();
+// Note: Use EnvironmentConfig.getInstance() directly to configure options like suppressWarnings
+// export const env = EnvironmentConfig.getInstance(); // Removed to prevent automatic initialization
