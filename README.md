@@ -293,9 +293,19 @@ Get singleton instance of EnvironmentConfig. Options:
 - `hotReload`: boolean — Whether to enable hot-reloading (default: false)
 - `watchFiles`: boolean — Whether to watch for file changes (default: false)
 - `watchInterval`: number — Interval in milliseconds to check for changes (default: 5000)
+- `suppressWarnings`: boolean — Whether to suppress warning logs for missing/invalid env files (default: false)
 
 ```typescript
 const env = EnvironmentConfig.getInstance(MySchema, { validateStartup: true });
+```
+
+**CLI Applications**: Use `suppressWarnings: true` to prevent warning logs from appearing to end users:
+
+```typescript
+const env = EnvironmentConfig.getInstance(MySchema, { 
+  suppressWarnings: true, // Hide warnings from end users
+  validateStartup: true 
+});
 ```
 
 #### `get<K>(key)`

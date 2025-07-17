@@ -93,4 +93,14 @@ const environmentConfig = {
 const currentEnvConfig = environmentConfig[env.stage as keyof typeof environmentConfig];
 console.log(`Configuration for ${env.stage}:`, currentEnvConfig);
 
+// Example 9: Suppressing warning logs (useful for CLI applications)
+console.log('\n=== Suppressing Warnings ===');
+const silentEnv = EnvironmentConfig.getInstance(undefined, {
+  suppressWarnings: true,
+  envFiles: ['.env', '.env.local', '.env.missing'], // Include a file that doesn't exist
+});
+
+console.log('✅ Environment loaded without warning logs');
+console.log(`Stage: ${silentEnv.stage}`);
+
 console.log('\n=== Examples Complete ===');

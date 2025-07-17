@@ -10,6 +10,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Initial project setup
 
+## [1.4.0] - 2025-01-27 (MINOR RELEASE)
+
+### ✨ Features
+
+- Add `suppressWarnings` option to control warning logs for missing/invalid env files
+- Useful for CLI applications where end users shouldn't see internal warning messages
+- Added comprehensive tests for the new warning suppression functionality
+- Updated documentation with examples for CLI usage
+
+### 👥 Contributors
+
+Thanks to Lee Priest for contributing to this release!
+
 ## [1.2.0] - 2025-07-05 (MINOR RELEASE)
 
 ### 🔨 Chores

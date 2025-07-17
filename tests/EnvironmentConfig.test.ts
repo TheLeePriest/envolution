@@ -142,4 +142,55 @@ describe('EnvironmentConfig', () => {
       expect(env.get('NON_EXISTENT_VAR')).toBeUndefined();
     });
   });
+
+  describe('Warning Suppression', () => {
+    it('should suppress warnings when suppressWarnings is true', () => {
+      // Mock console.warn to capture warnings
+      const originalWarn = console.warn;
+      const warnings: string[] = [];
+      console.warn = (...args: unknown[]) => {
+        warnings.push(args.join(' '));
+      };
+
+      try {
+        // Create instance with suppressWarnings: true
+        const env = EnvironmentConfig.getInstance(undefined, {
+          suppressWarnings: true,
+          envFiles: ['.env.missing', '.env.another-missing'], // Files that don't exist
+        });
+
+        // Verify no warnings were logged
+        expect(warnings).toHaveLength(0);
+        expect(env).toBeDefined();
+      } finally {
+        // Restore original console.warn
+        console.warn = originalWarn;
+      }
+    });
+
+    it('should show warnings when suppressWarnings is false (default)', () => {
+      // Mock console.warn to capture warnings
+      const originalWarn = console.warn;
+      const warnings: string[] = [];
+      console.warn = (...args: unknown[]) => {
+        warnings.push(args.join(' '));
+      };
+
+      try {
+        // Create instance with suppressWarnings: false (default)
+        const env = EnvironmentConfig.getInstance(undefined, {
+          suppressWarnings: false,
+          envFiles: ['.env.missing', '.env.another-missing'], // Files that don't exist
+        });
+
+        // Verify warnings were logged
+        expect(warnings.length).toBeGreaterThan(0);
+        expect(warnings.some(w => w.includes('Could not load'))).toBe(true);
+        expect(env).toBeDefined();
+      } finally {
+        // Restore original console.warn
+        console.warn = originalWarn;
+      }
+    });
+  });
 });

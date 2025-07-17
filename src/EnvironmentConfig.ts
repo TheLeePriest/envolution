@@ -20,6 +20,8 @@ export interface EnvironmentConfigOptions {
   watchInterval?: number;
   /** Whether to enable hot-reloading */
   hotReload?: boolean;
+  /** Whether to suppress warning logs for missing/invalid env files */
+  suppressWarnings?: boolean;
 }
 
 /**
@@ -94,6 +96,7 @@ export class EnvironmentConfig<
       watchFiles: false,
       watchInterval: 5000,
       hotReload: false,
+      suppressWarnings: false,
       ...options,
     };
 
@@ -141,7 +144,9 @@ export class EnvironmentConfig<
         this.watchers.push({ path: filePath, watcher });
       } catch (error) {
         // File might not exist yet, that's okay
-        console.warn(`Warning: Could not watch ${envFile}: ${error}`);
+        if (!this.options.suppressWarnings) {
+          console.warn(`Warning: Could not watch ${envFile}: ${error}`);
+        }
       }
     }
 
@@ -269,7 +274,7 @@ export class EnvironmentConfig<
     for (const envFile of this.options.envFiles) {
       try {
         const result = config({ path: resolve(process.cwd(), envFile) });
-        if (result.error) {
+        if (result.error && !this.options.suppressWarnings) {
           console.warn(`Warning: Could not load ${envFile}: ${result.error.message}`);
         }
       } catch (error) {
@@ -277,7 +282,9 @@ export class EnvironmentConfig<
         if (error instanceof Error && error.message.includes('ENOENT')) {
           continue;
         }
-        console.warn(`Warning: Error loading ${envFile}: ${error}`);
+        if (!this.options.suppressWarnings) {
+          console.warn(`Warning: Error loading ${envFile}: ${error}`);
+        }
       }
     }
   }
